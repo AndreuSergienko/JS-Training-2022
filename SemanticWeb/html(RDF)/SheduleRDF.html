@@ -9,7 +9,7 @@
 	<body>
 		<!-- Header -->
 		<header>
-			<h1 align="center">
+			<h1 align="center" property="http://purl.org/dc/terms/title">
 				Hello!Here you'll see some tables, shedule and info about me
 			</h1>
 		</header>
@@ -19,9 +19,15 @@
 			<section>
 				<nav>
 					<ul>
-						<li><a href="Home++.html">Home</a></li>
-						<li><a href="Shedule++.html">Shedule</a></li>
-						<li><a href="About++.html">About</a></li>
+						<li>
+							<a href="HomeRDF.html">Home</a>
+						</li>
+						<li>
+							<a href="SheduleRDF.html">Shedule</a>
+						</li>
+						<li>
+							<a href="AboutRDF.html">About me</a>
+						</li>
 					</ul>
 				</nav>
 			</section>
@@ -46,13 +52,18 @@
 
 			<!-- table section -->
 			<section>
-				<table id="table" border="1" cellpadding="10">
+				<table
+					id="table"
+					border="1"
+					cellpadding="10"
+					property="http://purl.org/dc/terms/tableOfContents"
+				>
 					<thead>
-						<th>NAME</th>
-						<th>DATE</th>
-						<th>TIME</th>
+						<th property="http://purl.org/dc/terms/subject">NAME</th>
+						<th property="http://purl.org/dc/terms/date">DATE</th>
+						<th property="http://purl.org/dc/terms/date">TIME</th>
 						<th>SPEAKER</th>
-						<th>DURATION</th>
+						<th property="http://purl.org/dc/terms/extent">DURATION</th>
 					</thead>
 					<tr align="center">
 						<td><span class="cell" id="NAME0"></span></td>
@@ -95,12 +106,30 @@
 		<!-- Footer -->
 		<footer>
 			<p>
-				<b><font size="5">Date of performing: 11.02.2022</font></b>
+				<b>
+					<font size="5">
+						Date of performing:
+						<span property="http://purl.org/dc/terms/created">11.02.2022</span>
+					</font>
+				</b>
 			</p>
-			<p><font size="5">Task was performed by Andrey Sergienko</font></p>
-			<p><font size="5">Chrome Version: 98.0.4758.82</font></p>
-			<!-- Joining scripts -->
+			<p>
+				<font size="5">
+					Task was performed by
+					<span property="http://purl.org/dc/terms/creator">Andrey</span>
+					<span property="http://purl.org/dc/terms/creator">Sergienko</span>
+				</font>
+			</p>
+			<p>
+				<font size="5">
+					Chrome Version:
+					<span property="http://purl.org/dc/terms/hasVersion">
+						98.0.4758.82
+					</span>
+				</font>
+			</p>
 		</footer>
+		<!-- Joining scripts -->
 		<script src="../js/shedule.js"></script>
 		<script src="../js/list.js"></script>
 	</body>

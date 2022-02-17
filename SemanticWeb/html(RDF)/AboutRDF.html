@@ -19,9 +19,15 @@
 			<section>
 				<nav>
 					<ul>
-						<li><a href="Home++.html">Home</a></li>
-						<li><a href="Shedule++.html">Shedule</a></li>
-						<li><a href="About++.html">About</a></li>
+						<li>
+							<a href="HomeRDF.html">Home</a>
+						</li>
+						<li>
+							<a href="SheduleRDF.html">Shedule</a>
+						</li>
+						<li>
+							<a href="AboutRDF.html">About me</a>
+						</li>
 					</ul>
 				</nav>
 			</section>
@@ -32,7 +38,13 @@
 					<p>
 						<font size="5">
 							Hello everyone surfing this page!Let me introduce myself.My name
-							is Andrey,my last name is Sergienko.
+							is
+							<span property="http://purl.org/dc/terms/creator">Andrey</span>,my
+							last name is
+							<span property="http://purl.org/dc/terms/creator">
+								Sergienko
+							</span>
+							.
 							<br />
 							I was born in Gomel,Belarus. Now I'm 19. I study at Francisk
 							Skorina Gomel State University.
@@ -77,16 +89,28 @@
 		<!-- Footer -->
 		<footer>
 			<p>
-				<b><font size="5">Date of performing: 11.02.2022</font></b>
+				<b>
+					<font size="5">
+						Date of performing:
+						<span property="http://purl.org/dc/terms/created">11.02.2022</span>
+					</font>
+				</b>
 			</p>
 			<p>
 				<font size="5">
 					Task was performed by
-					<span>Andrey</span>
-					<span>Sergienko</span>
+					<span property="http://purl.org/dc/terms/creator">Andrey</span>
+					<span property="http://purl.org/dc/terms/creator">Sergienko</span>
 				</font>
 			</p>
-			<p><font size="5">Chrome Version: 98.0.4758.82</font></p>
+			<p>
+				<font size="5">
+					Chrome Version:
+					<span property="http://purl.org/dc/terms/hasVersion">
+						98.0.4758.82
+					</span>
+				</font>
+			</p>
 		</footer>
 		<!-- Joining scripts -->
 		<script src="../js/list.js"></script>

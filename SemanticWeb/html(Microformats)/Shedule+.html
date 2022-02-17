@@ -14,10 +14,10 @@
 			</h1>
 		</header>
 		<!-- menu -->
-		<ul>
-			<li><a href="Home+.html">Home</a></li>
-			<li><a href="Shedule+.html">Shedule</a></li>
-			<li><a href="About+.html">About</a></li>
+		<ul class="vcard">
+			<li><a href="Home+.html" class="url">Home</a></li>
+			<li><a href="Shedule+.html" class="url">Shedule</a></li>
+			<li><a href="About+.html" class="url">About</a></li>
 		</ul>
 		<!-- radiobuttons -->
 		<div class="radio-buttons">
@@ -35,13 +35,13 @@
 			</div>
 		</div>
 		<!-- table -->
-		<table id="table" border="1" cellpadding="10">
+		<table class="vevent" id="table" border="1" cellpadding="10">
 			<thead>
-				<th>NAME</th>
-				<th>DATE</th>
-				<th>TIME</th>
+				<th><span class="description">NAME</span></th>
+				<th><span class="dtstart">DATE</span></th>
+				<th><span class="dtstart">TIME</span></th>
 				<th>SPEAKER</th>
-				<th>DURATION</th>
+				<th><span class="duration">DURATION</span></th>
 			</thead>
 			<tr align="center">
 				<td><span class="cell" id="NAME0"></span></td>
@@ -81,13 +81,26 @@
 		</table>
 		<!-- Footer -->
 		<footer>
-			<p>
-				<b><font size="5">Date of performing: 11.02.2022</font></b>
-			</p>
-			<p><font size="5">Task was performed by Andrey Sergienko</font></p>
+			<div class="vevent">
+				<p>
+					<b>
+						<font size="5">
+							Date of performing: <span class="dtstamp">11.02.2022</span>
+						</font>
+					</b>
+				</p>
+			</div>
+			<div class="vcard">
+				<p>
+					<font size="5">
+						Task was performed by <span class="given-name">Andrey</span>
+						<span class="family-name">Sergienko</span>
+					</font>
+				</p>
+			</div>
 			<p><font size="5">Chrome Version: 98.0.4758.82</font></p>
-			<!-- Joining scripts -->
 		</footer>
+		<!-- Joining scripts -->
 		<script src="../js/shedule.js"></script>
 		<script src="../js/list.js"></script>
 	</body>

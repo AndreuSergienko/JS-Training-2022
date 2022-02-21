@@ -4,34 +4,34 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About++</title>
+		<title>AboutRDF</title>
 	</head>
 	<body>
 		<!-- Header -->
 		<header>
-			<h1 align="center">
+			<h1 align="center" property="http://purl.org/dc/terms/title">
 				Hello!Here you'll see some tables, shedule and info about me
 			</h1>
 		</header>
+
+		<!-- navigation -->
+		<nav>
+			<ul>
+				<li>
+					<a href="HomeRDF.html">Home</a>
+				</li>
+				<li>
+					<a href="SheduleRDF.html">Shedule</a>
+				</li>
+				<li>
+					<a href="AboutRDF.html" property="http://purl.org/dc/terms/creator">
+						About me
+					</a>
+				</li>
+			</ul>
+		</nav>
 		<!-- Main -->
 		<main>
-			<!-- menu section -->
-			<section>
-				<nav>
-					<ul>
-						<li>
-							<a href="HomeRDF.html">Home</a>
-						</li>
-						<li>
-							<a href="SheduleRDF.html">Shedule</a>
-						</li>
-						<li>
-							<a href="AboutRDF.html">About me</a>
-						</li>
-					</ul>
-				</nav>
-			</section>
-
 			<!-- content section -->
 			<section>
 				<article>
@@ -99,8 +99,9 @@
 			<p>
 				<font size="5">
 					Task was performed by
-					<span property="http://purl.org/dc/terms/creator">Andrey</span>
-					<span property="http://purl.org/dc/terms/creator">Sergienko</span>
+					<span property="http://purl.org/dc/terms/creator">
+						Andrey Sergienko
+					</span>
 				</font>
 			</p>
 			<p>

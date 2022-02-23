@@ -4,7 +4,7 @@
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:dc= "http://purl.org/dc/terms/1.1/">
 
-<rdf:Description rdf:about="HomeRDFa.html">
+<rdf:Description rdf:about="AboutRDFa.html">
   <dc:title>Hello!Here you'll see some tables, shedule and info about me</dc:title>
   <dc:creator>Andrey Sergienko</dc:creator>
   <dc:created>11.02.2022</dc:created>

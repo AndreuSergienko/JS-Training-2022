@@ -6,40 +6,40 @@ xmlns:cd="SheduleRDFa.html/cd#">
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/INTERNAL TRAINING">
-  <cd:date>13.02.2022</cd:da>
-  <cd:time>13:00</cd:ti>
+  <cd:date>13.02.2022</cd:date>
+  <cd:time>13:00</cd:time>
   <cd:speaker>JHON</cd:speaker>
   <cd:duration>2 hours</cd:duration>
 </rdf:Description>
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/ONLINE MEETING">
-  <cd:date>18.02.2022</cd:da>
-  <cd:time>14:30</cd:ti>
+  <cd:date>18.02.2022</cd:date>
+  <cd:time>14:30</cd:time>
   <cd:speaker>MARK</cd:speaker>
   <cd:duration>1 hours</cd:duration>
 </rdf:Description>
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/OFFLINE MEETING">
-  <cd:date>20.02.2022</cd:da>
-  <cd:time>12:20</cd:ti>
+  <cd:date>20.02.2022</cd:date>
+  <cd:time>12:20</cd:time>
   <cd:speaker>JAMES</cd:speaker>
   <cd:duration>1.30 hours</cd:duration>
 </rdf:Description>
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/OPENED CONFERENCE">
-  <cd:date>02.03.2022</cd:da>
-  <cd:time>15:00</cd:ti>
+  <cd:date>02.03.2022</cd:date>
+  <cd:time>15:00</cd:time>
   <cd:speaker>WILLIAM</cd:speaker>
   <cd:duration>2.20 hours</cd:duration>
 </rdf:Description>
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/CLOSED CONFERENCE">
-  <cd:date>10.03.2022</cd:da>
-  <cd:time>13:00</cd:ti>
+  <cd:date>10.03.2022</cd:date>
+  <cd:time>13:00</cd:time>
   <cd:speaker>BRANDON</cd:speaker>
   <cd:duration>3 hours</cd:duration>
 </rdf:Description>

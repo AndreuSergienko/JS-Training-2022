@@ -38,7 +38,7 @@ rdf:about="SheduleRDFa.html/cd/OPENED CONFERENCE">
 
 <rdf:Description
 rdf:about="SheduleRDFa.html/cd/CLOSED CONFERENCE">
-  <cd:date>10.03.2022	</cd:da>
+  <cd:date>10.03.2022</cd:da>
   <cd:time>13:00</cd:ti>
   <cd:speaker>BRANDON</cd:speaker>
   <cd:duration>3 hours</cd:duration>

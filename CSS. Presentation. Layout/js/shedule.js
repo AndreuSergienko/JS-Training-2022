@@ -32,15 +32,14 @@ radioBlocks.forEach((radioBlock) => {
         radioBlocks.forEach((item) => {
             item.childNodes[1].checked = false;
             item.childNodes[3].style = "font-weight:normal";
+            item.childNodes[3].classList.remove('flicker');
             item.classList.remove("active");
-        });
-        inputs.forEach((input) => {
-            input.checked = false;
         });
         radioBlock.classList.add("active");
         if (e.target.closest(".radio-block")) {
             radioBlock.childNodes[1].checked = true;
             radioBlock.childNodes[3].style = "font-weight:600";
+            radioBlock.childNodes[3].classList.add('flicker');
         }
         if (radioButtons.childNodes[1].classList.contains("active")) {
             table.style = "border: 3px dotted rgb(195, 195, 6) ";

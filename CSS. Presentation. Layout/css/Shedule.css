@@ -164,12 +164,6 @@ footer p:not(:last-child) {
 	}
 }
 
-@media (max-width: 520px) {
-	.cell {
-		font-size: 13px;
-	}
-}
-
 @media (max-width: 425px) {
 	main {
 		padding: 100px 0px 0px 0px;

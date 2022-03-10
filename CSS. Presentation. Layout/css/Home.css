@@ -67,6 +67,18 @@ header h1 {
 	top: 25px;
 	left: 50px;
 }
+.menu.scrolled {
+	background: #000;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 5px 0px 5px 0px;
+	transition: all 0.1s ease;
+}
+.menu.scrolled a {
+	color: #fff;
+	transition: all 0.1s ease;
+}
 
 .menu-list {
 	display: grid;
@@ -143,6 +155,10 @@ main {
 
 /* ============FOOTER==================== */
 
+footer {
+	float: right;
+}
+
 footer p {
 	font-size: 22px;
 }
@@ -203,6 +219,9 @@ footer p:not(:last-child) {
 	}
 	.news-items p {
 		font-size: 14px;
+	}
+	footer p {
+		font-size: 19px;
 	}
 }
 

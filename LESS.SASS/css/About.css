@@ -46,7 +46,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("../img/code-coding-laptop-programming.jpg");
 }
 header {
   padding: 10px 0;
@@ -91,6 +90,17 @@ main {
 .about p {
   font-size: 25px;
   line-height: 1.1;
+}
+.more-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.img-w {
+  width: 50%;
+}
+.img-w img {
+  max-width: 100%;
 }
 footer {
   margin-top: auto;

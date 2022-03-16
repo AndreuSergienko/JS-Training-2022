@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../img/code-coding-laptop-programming.jpg");
+}
+header {
+  padding: 10px 0;
+}
+.page-title {
+  text-align: center;
+  font-size: 30px;
+}
+.menu {
+  padding: 20px 0 0 20px;
+}
+.menu .menu-list {
+  background: #e0e00c;
+  display: inline-block;
+  min-width: 200px;
+  border: 3px solid #000;
+  -webkit-box-shadow: 2px 5px 10px #462e2e;
+          box-shadow: 2px 5px 10px #462e2e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu .menu-list li {
+  padding: 10px 0 10px 5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.menu .menu-list li:hover {
+  background: #f4f42b;
+  padding: 10px 0 10px 20px;
+}
+.menu .menu-list li:hover body {
+  background: red;
+}
+.menu .menu-list li a {
+  font-size: 22px;
+  color: #000;
+  display: block;
+}
+main {
+  padding-top: 35px;
+}
+.about p {
+  font-size: 25px;
+  line-height: 1.1;
+}
+footer {
+  margin-top: auto;
+  padding-bottom: 30px;
+}
+footer .footer-box {
+  display: inline-block;
+  border: 3px dashed #f86;
+  background: #ffb8a5;
+  padding: 20px 40px 20px 15px;
+  border-radius: 10px;
+}
+footer .footer-box p {
+  font-size: 23px;
+}
+footer .footer-box p:not(:last-child) {
+  margin-bottom: 10px;
+}

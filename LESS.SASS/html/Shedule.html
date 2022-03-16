@@ -14,7 +14,7 @@
    <div class="wrapper">
       <!-- Header -->
       <header>
-         <h1 align="center">
+         <h1 class="page-title">
             Hello!Here you'll see some tables, shedule and info about me
          </h1>
       </header>
@@ -31,18 +31,23 @@
       <!-- Main -->
       <main>
          <!-- radiobuttons -->
-         <div class="radio-buttons">
-            <div class="radio-block">
-               <input class="input" id="input1" type="radio" name="firstOption" />
-               <label id="label1" class="input-label">FIRST STYLE</label>
+         <div class="radio-selector">
+            <div class="radio-buttons">
+               <div class="radio-block">
+                  <input class="input" id="input1" type="radio" name="firstOption" />
+                  <label id="label1" class="input-label">FIRST STYLE</label>
+               </div>
+               <div class="radio-block">
+                  <input class="input" id="input2" type="radio" name="firstOption" />
+                  <label id="label2" class="input-label">SECOND STYLE</label>
+               </div>
+               <div class="radio-block">
+                  <input class="input" id="input3" type="radio" name="firstOption" />
+                  <label id="label3" class="input-label">DEFAULT STYLE</label>
+               </div>
             </div>
-            <div class="radio-block">
-               <input class="input" id="input2" type="radio" name="firstOption" />
-               <label id="label2" class="input-label">SECOND STYLE</label>
-            </div>
-            <div class="radio-block">
-               <input class="input" id="input3" type="radio" name="firstOption" />
-               <label id="label3" class="input-label">DEFAULT STYLE</label>
+            <div class="style-selector">
+               <span>Choose any style you want!</span>
             </div>
          </div>
          <!-- table -->
@@ -94,17 +99,12 @@
 
       <!-- Footer -->
       <footer>
-         <p>
-            <b>
-               <font size="5">Date of performing: 11.02.2022</font>
-            </b>
-         </p>
-         <p>
-            <font size="5">Task was performed by Andrey Sergienko</font>
-         </p>
-         <p>
-            <font size="5">Chrome Version: 98.0.4758.82</font>
-         </p>
+         <div class="footer-box">
+            <p>Date of performing: 11.02.2022</p>
+            <p>Task was performed by Andrey Sergienko</p>
+            <p>Chrome Version: 98.0.4758.82</p>
+         </div>
+
       </footer>
    </div>
    <!-- Joining scripts -->

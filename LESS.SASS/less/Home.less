@@ -4,8 +4,26 @@
 @mainbg: #eee;
 @ffr: "Roboto", sans-serif;
 @ffm: "Montserrat", sans-serif;
-@bor: 3px solid @mainclr;
-
+@mobile-L: ~"(max-width: 425px)";
+@mobile-S: ~"(max-width: 320px)";
+// ===================MIXINS================================
+.transition(@prop, @dur, @timefun) {
+  transition: @prop @dur @timefun;
+}
+.border(@width, @style, @color) {
+  border: @width @style @color;
+}
+.box-shadow(@x, @y, @z, @color) {
+  box-shadow: @x @y @z @color;
+}
+.body-min-reset(@height: 100%, @line-height: 1) {
+  height: @height;
+  line-height: @line-height;
+  font-size: @mainfz;
+  color: @mainclr;
+  background: @mainbg;
+  font-family: @ffr;
+}
 // ===============MINRESET============================
 *,
 *::after,
@@ -41,19 +59,14 @@ h6 {
 
 html,
 body {
-  height: 100%;
-  line-height: 1;
-  font-size: @mainfz;
-  color: @mainclr;
-  background: @mainbg;
-  font-family: @ffr;
+  .body-min-reset();
 }
 
 // ==============WRAPPER=========================
 .wrapper {
   min-height: 100%;
-  padding: 0 15px;
   overflow: hidden;
+  padding: 0 15px;
 }
 // =============HEADER=============================
 header {
@@ -71,14 +84,15 @@ header {
     background: rgb(224, 224, 12);
     display: inline-block;
     min-width: 200px;
-    border: @bor;
+    .border(3px, solid, #000);
+    .box-shadow(2px, 5px, 10px, #462e2e);
     border-radius: 10px;
     overflow: hidden;
     li {
       padding: 10px 0 10px 5px;
-      transition: 0.2s ease-out;
+      .transition(all, 0.2s, ease-out);
       &:hover {
-        background: rgb(255, 255, 150);
+        background: lighten(rgb(224, 224, 12), 10%);
         padding: 10px 0 10px 20px;
         body {
           background: red;
@@ -169,7 +183,7 @@ footer {
   padding: 26px 0 10px 5px;
 }
 .footer-box {
-  border: @bor;
+  .border(3px, solid, #000);
   border-radius: 0 15px 0 15px;
   display: inline-block;
   padding: 20px;
@@ -185,7 +199,7 @@ footer {
 
 // ==============MEDIA=======================
 
-@media (max-width: 425px) {
+@media @mobile-L {
   .intro {
     p {
       font-size: 23px;
@@ -197,11 +211,13 @@ footer {
     }
   }
   .news-items {
-    h4 {
-      font-size: 23px;
-    }
-    p {
-      font-size: @mainfz;
+    div {
+      h4 {
+        font-size: 23px;
+      }
+      p {
+        font-size: @mainfz;
+      }
     }
   }
   .footer-box {
@@ -210,7 +226,7 @@ footer {
     }
   }
 }
-@media (max-width: 320px) {
+@media @mobile-S {
   .news-items {
     div {
       padding: 0 1px;

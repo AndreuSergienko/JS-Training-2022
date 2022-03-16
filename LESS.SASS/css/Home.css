@@ -38,8 +38,8 @@ body {
 }
 .wrapper {
   min-height: 100%;
-  padding: 0 15px;
   overflow: hidden;
+  padding: 0 15px;
 }
 header {
   padding: 10px 0;
@@ -56,16 +56,18 @@ header {
   display: inline-block;
   min-width: 200px;
   border: 3px solid #000;
+  -webkit-box-shadow: 2px 5px 10px #462e2e;
+          box-shadow: 2px 5px 10px #462e2e;
   border-radius: 10px;
   overflow: hidden;
 }
 .menu .menu-list li {
   padding: 10px 0 10px 5px;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .menu .menu-list li:hover {
-  background: #ffff96;
+  background: #f4f42b;
   padding: 10px 0 10px 20px;
 }
 .menu .menu-list li:hover body {
@@ -151,10 +153,10 @@ footer {
   .news h2 {
     font-size: 30px;
   }
-  .news-items h4 {
+  .news-items div h4 {
     font-size: 23px;
   }
-  .news-items p {
+  .news-items div p {
     font-size: 16px;
   }
   .footer-box p {

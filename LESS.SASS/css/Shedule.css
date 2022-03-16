@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+}
+header {
+  padding: 10px 0;
+}
+.page-title {
+  text-align: center;
+  font-size: 30px;
+}
+.menu {
+  padding: 20px 0 0 20px;
+}
+.menu .menu-list {
+  background: #e0e00c;
+  display: inline-block;
+  min-width: 200px;
+  border: 3px solid #000;
+  -webkit-box-shadow: 2px 5px 10px #462e2e;
+          box-shadow: 2px 5px 10px #462e2e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu .menu-list li {
+  padding: 10px 0 10px 5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.menu .menu-list li:hover {
+  background: #f4f42b;
+  padding: 10px 0 10px 20px;
+}
+.menu .menu-list li:hover body {
+  background: red;
+}
+.menu .menu-list li a {
+  font-size: 22px;
+  color: #000;
+  display: block;
+}

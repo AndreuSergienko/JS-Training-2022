@@ -123,18 +123,76 @@ main {
 
 .more-info {
   display: flex;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 .img-w {
   width: 50%;
+  text-align: center;
   img {
     max-width: 100%;
+    .border(2px, solid, #000);
+  }
+}
+.img-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  display: block;
+}
+
+// =========FORM=================
+form {
+  .border(3px, solid, #000);
+  background: aquamarine;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 15px;
+  h3 {
+    font-size: 25px;
+    color: lighten(black, 10%);
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  div {
+    margin-bottom: 20px;
+    label {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #4200ff;
+    }
+    input {
+      padding: 10px;
+      border-radius: 15px;
+      border: 0;
+      font-size: @mainfz;
+      font-family: @ffr;
+      font-weight: 600;
+      .transition(all, 0.3s, ease-out);
+      &:focus {
+        .box-shadow(2px, 2px, 10px, rgb(98, 98, 98));
+      }
+    }
+  }
+  button {
+    border: 0;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 20px;
+    background: orange;
+    font-size: 20px;
+    color: #fff;
+    .transition(all, 0.3s, ease-out);
+    &:hover {
+      background: #f8c973;
+      color: #000;
+    }
   }
 }
 
 // =====================FOOTER======================
 
 footer {
-  margin-top: auto;
+  padding-top: 50px;
   padding-bottom: 30px;
   .footer-box {
     display: inline-block;

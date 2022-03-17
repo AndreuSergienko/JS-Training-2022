@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!-- Имя файла: Events.xml -->
+
+<EVENTS>
+   <EVENT>
+      <NAME>INTERNAL TRAINING</NAME>
+      <DATE>13.02.2022</DATE>
+      <TIME>13:00</TIME>
+      <SPEAKER>JHON</SPEAKER>
+      <DURATION>2 hours</DURATION>
+   </EVENT>
+   <EVENT>
+      <NAME>ONLINE MEETING</NAME>
+      <DATE>18.02.2022</DATE>
+      <TIME>14:30</TIME>
+      <SPEAKER>MARK</SPEAKER>
+      <DURATION>1 hours</DURATION>
+   </EVENT>
+   <EVENT>
+      <NAME>OFFLINE MEETING</NAME>
+      <DATE>20.02.2022</DATE>
+      <TIME>12:20</TIME>
+      <SPEAKER>JAMES</SPEAKER>
+      <DURATION>1.30 hours</DURATION>
+   </EVENT>
+   <EVENT>
+      <NAME>OPENED CONFERENCE</NAME>
+      <DATE>02.03.2022</DATE>
+      <TIME>15:00</TIME>
+      <SPEAKER>WILLIAM</SPEAKER>
+      <DURATION>2.20 hours</DURATION>
+   </EVENT>
+   <EVENT>
+      <NAME>CLOSED CONFERENCE</NAME>
+      <DATE>10.03.2022</DATE>
+      <TIME>13:00</TIME>
+      <SPEAKER>BRANDON</SPEAKER>
+      <DURATION>3 hours</DURATION>
+   </EVENT>
+</EVENTS>

@@ -1,0 +1,176 @@
+// ================VARS==========================
+@mainfz: 16px;
+@mainclr: #000;
+@mainbg: #eee;
+@ffr: "Roboto", sans-serif;
+@ffm: "Montserrat", sans-serif;
+@mobile-L: ~"(max-width: 425px)";
+@mobile-S: ~"(max-width: 320px)";
+// ===================MIXINS================================
+.transition(@prop, @dur, @timefun) {
+  transition: @prop @dur @timefun;
+}
+.border(@width, @style, @color) {
+  border: @width @style @color;
+}
+.box-shadow(@x, @y, @z, @color) {
+  box-shadow: @x @y @z @color;
+}
+.body-min-reset(@height: 100%, @line-height: 1) {
+  height: @height;
+  line-height: @line-height;
+  font-size: @mainfz;
+  color: @mainclr;
+  background: @mainbg;
+  font-family: @ffr;
+}
+// ===============MINRESET============================
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  .body-min-reset();
+}
+
+// ==============WRAPPER=========================
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  background: url("../img/code-coding-laptop-programming.jpg");
+}
+// =============HEADER=============================
+header {
+  padding: 10px 0;
+}
+.page-title {
+  text-align: center;
+  font-size: 30px;
+}
+// ================NAV===============================
+
+.menu {
+  padding: 20px 0 0 20px;
+  .menu-list {
+    background: rgb(224, 224, 12);
+    display: inline-block;
+    min-width: 200px;
+    .border(3px, solid, #000);
+    .box-shadow(2px, 5px, 10px, #462e2e);
+    border-radius: 10px;
+    overflow: hidden;
+    li {
+      padding: 10px 0 10px 5px;
+      .transition(all, 0.2s, ease-out);
+      &:hover {
+        background: lighten(rgb(224, 224, 12), 10%);
+        padding: 10px 0 10px 20px;
+        body {
+          background: red;
+        }
+      }
+      a {
+        font-size: 22px;
+        color: @mainclr;
+        display: block;
+      }
+    }
+  }
+}
+// ==================MAIN==========================
+
+main {
+  padding-top: 35px;
+}
+
+// ======RADIOBUTTONS========
+
+.radio-selector {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 30px;
+  }
+}
+
+.radio-buttons {
+  .border(3px, dashed, darken(#f28383, 100%));
+  background: #f28383;
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 15px 0 15px 10px;
+}
+.radio-block:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.style-selector {
+  margin-left: 20px;
+  span {
+    background: url("../img/icons8-длинная-стрелка-влево-80.png") no-repeat left
+      center;
+    min-height: 80px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 100px;
+  }
+}
+// ========TABLE============
+
+#table {
+  margin-top: 40px;
+  border-radius: 10px;
+  .box-shadow(2px, 5px, 10px, #ccc);
+  background: #fff;
+}
+
+// =========FOOTER==============================
+
+footer {
+  margin-top: auto;
+  padding-bottom: 30px;
+  .footer-box {
+    display: inline-block;
+    .border(3px, dashed, #f86);
+    background: rgb(255, 184, 165);
+    padding: 20px 40px 20px 15px;
+    border-radius: 10px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      font-size: 23px;
+    }
+  }
+}

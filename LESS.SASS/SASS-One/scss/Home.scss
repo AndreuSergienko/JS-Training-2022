@@ -24,6 +24,10 @@ $mobile-S: #{"(max-width: 320px)"};
   background: $mainbg;
   font-family: $ffr;
 }
+// =============FUNCTIONS============================
+@function bradius($tl, $tr, $br, $bl) {
+  @return $tl $tr $br $bl;
+}
 // ===============MINRESET============================
 *,
 *::after,
@@ -196,7 +200,15 @@ footer {
 }
 .footer-box {
   @include border(3px, solid, #000);
-  border-radius: 0 15px 0 15px;
+  // border-radius: bradius(0, 15px, 0, 15px); IT WAS FIRST OPTION
+  $radiuses: border-top-left-radius, border-top-right-radius,
+    border-bottom-right-radius, border-bottom-left-radius;
+  $startradius: 5px;
+  // USING @EACH FOR FUN)
+  @each $border-corner in $radiuses {
+    #{$border-corner}: $startradius;
+    $startradius: $startradius + 5px;
+  }
   display: inline-block;
   padding: 20px;
   background: aquamarine;

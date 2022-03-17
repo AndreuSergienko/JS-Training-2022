@@ -89,11 +89,19 @@ header {
     border-radius: 10px;
     overflow: hidden;
     li {
-      padding: 10px 0 10px 5px;
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          padding: 10px 0px 10px 5px;
+        }
+      }
       @include transition(all, 0.2s, ease-out);
       &:hover {
         background: lighten(rgb(224, 224, 12), 10%);
-        padding: 10px 0 10px 20px;
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            padding: 10px 0px 10px 20px;
+          }
+        }
         body {
           background: red;
         }
@@ -144,7 +152,11 @@ main {
 .news-items {
   display: flex;
   div {
-    padding: 0 10px;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        padding: 0 10px;
+      }
+    }
     text-align: center;
     h4 {
       font-size: 30px;
@@ -191,45 +203,52 @@ footer {
   p {
     font-size: 23px;
     font-family: $ffm;
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    @for $i from 1 to 3 {
+      &:nth-child(#{$i}) {
+        margin-bottom: 10px;
+      }
     }
   }
 }
 
 // ==============MEDIA=======================
 
-@media #{$mobile-L} {
-  .intro {
-    p {
-      font-size: 23px;
-    }
-  }
-  .news {
-    h2 {
-      font-size: 30px;
-    }
-  }
-  .news-items {
-    div {
-      h4 {
+@if $mobile-L {
+  @media #{$mobile-L} {
+    .intro {
+      p {
         font-size: 23px;
       }
-      p {
-        font-size: $mainfz;
+    }
+    .news {
+      h2 {
+        font-size: 30px;
       }
     }
-  }
-  .footer-box {
-    p {
-      font-size: 20px;
+    .news-items {
+      div {
+        h4 {
+          font-size: 23px;
+        }
+        p {
+          font-size: $mainfz;
+        }
+      }
+    }
+    .footer-box {
+      p {
+        font-size: 20px;
+      }
     }
   }
 }
-@media #{$mobile-S} {
-  .news-items {
-    div {
-      padding: 0 1px;
+
+@if $mobile-S {
+  @media #{$mobile-S} {
+    .news-items {
+      div {
+        padding: 0 1px;
+      }
     }
   }
 }

@@ -5,6 +5,8 @@ $mainbg: #eee;
 $ffr: "Roboto", sans-serif;
 $ffm: "Montserrat", sans-serif;
 $mainfz: 16px;
+$footerpar: 1, 2;
+$menu-li: 1, 2, 3;
 // ===================MIXINS================================
 @mixin transition($prop, $dur, $timefun) {
   transition: $prop $dur $timefun;
@@ -91,11 +93,19 @@ header {
     border-radius: 10px;
     overflow: hidden;
     li {
-      padding: 10px 0 10px 5px;
+      @each $li in $menu-li {
+        &:nth-child(#{$li}) {
+          padding: 10px 0px 10px 5px;
+        }
+      }
       @include transition(all, 0.2s, ease-out);
       &:hover {
         background: lighten(rgb(224, 224, 12), 10%);
-        padding: 10px 0 10px 20px;
+        @each $li in $menu-li {
+          &:nth-child(#{$li}) {
+            padding: 10px 0px 10px 20px;
+          }
+        }
         body {
           background: red;
         }
@@ -202,10 +212,12 @@ footer {
     padding: 20px 40px 20px 15px;
     border-radius: 10px;
     p {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
       font-size: 23px;
+      @each $var in $footerpar {
+        &:nth-child(#{$var}) {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

@@ -79,13 +79,29 @@ header {
   overflow: hidden;
 }
 .menu .menu-list li {
-  padding: 10px 0 10px 5px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+.menu .menu-list li:nth-child(1) {
+  padding: 10px 0px 10px 5px;
+}
+.menu .menu-list li:nth-child(2) {
+  padding: 10px 0px 10px 5px;
+}
+.menu .menu-list li:nth-child(3) {
+  padding: 10px 0px 10px 5px;
+}
 .menu .menu-list li:hover {
   background: #f4f42b;
-  padding: 10px 0 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(1) {
+  padding: 10px 0px 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(2) {
+  padding: 10px 0px 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(3) {
+  padding: 10px 0px 10px 20px;
 }
 .menu .menu-list li:hover body {
   background: red;
@@ -193,6 +209,9 @@ footer .footer-box {
 footer .footer-box p {
   font-size: 23px;
 }
-footer .footer-box p:not(:last-child) {
+footer .footer-box p:nth-child(1) {
+  margin-bottom: 10px;
+}
+footer .footer-box p:nth-child(2) {
   margin-bottom: 10px;
 }

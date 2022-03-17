@@ -71,13 +71,29 @@ header {
   overflow: hidden;
 }
 .menu .menu-list li {
-  padding: 10px 0 10px 5px;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+.menu .menu-list li:nth-child(1) {
+  padding: 10px 0px 10px 5px;
+}
+.menu .menu-list li:nth-child(2) {
+  padding: 10px 0px 10px 5px;
+}
+.menu .menu-list li:nth-child(3) {
+  padding: 10px 0px 10px 5px;
+}
 .menu .menu-list li:hover {
   background: #f4f42b;
-  padding: 10px 0 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(1) {
+  padding: 10px 0px 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(2) {
+  padding: 10px 0px 10px 20px;
+}
+.menu .menu-list li:hover:nth-child(3) {
+  padding: 10px 0px 10px 20px;
 }
 .menu .menu-list li:hover body {
   background: red;
@@ -124,8 +140,16 @@ main {
   display: flex;
 }
 .news-items div {
-  padding: 0 10px;
   text-align: center;
+}
+.news-items div:nth-child(1) {
+  padding: 0 10px;
+}
+.news-items div:nth-child(2) {
+  padding: 0 10px;
+}
+.news-items div:nth-child(3) {
+  padding: 0 10px;
 }
 .news-items div h4 {
   font-size: 30px;
@@ -159,7 +183,10 @@ footer {
   font-size: 23px;
   font-family: "Montserrat", sans-serif;
 }
-.footer-box p:not(:last-child) {
+.footer-box p:nth-child(1) {
+  margin-bottom: 10px;
+}
+.footer-box p:nth-child(2) {
   margin-bottom: 10px;
 }
 

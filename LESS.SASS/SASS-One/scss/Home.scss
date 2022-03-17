@@ -1,28 +1,28 @@
 // ================VARS==========================
-@mainfz: 16px;
-@mainclr: #000;
-@mainbg: #eee;
-@ffr: "Roboto", sans-serif;
-@ffm: "Montserrat", sans-serif;
-@mobile-L: ~"(max-width: 425px)";
-@mobile-S: ~"(max-width: 320px)";
+$mainfz: 16px;
+$mainclr: #000;
+$mainbg: #eee;
+$ffr: "Roboto", sans-serif;
+$ffm: "Montserrat", sans-serif;
+$mobile-L: #{"(max-width: 425px)"};
+$mobile-S: #{"(max-width: 320px)"};
 // ===================MIXINS================================
-.transition(@prop, @dur, @timefun) {
-  transition: @prop @dur @timefun;
+@mixin transition($prop, $dur, $timefun) {
+  transition: $prop $dur $timefun;
 }
-.border(@width, @style, @color) {
-  border: @width @style @color;
+@mixin border($width, $style, $color) {
+  border: $width $style $color;
 }
-.box-shadow(@x, @y, @z, @color) {
-  box-shadow: @x @y @z @color;
+@mixin box-shadow($x, $y, $z, $color) {
+  box-shadow: $x $y $z $color;
 }
-.body-min-reset(@height: 100%, @line-height: 1) {
-  height: @height;
-  line-height: @line-height;
-  font-size: @mainfz;
-  color: @mainclr;
-  background: @mainbg;
-  font-family: @ffr;
+@mixin body-min-reset($height: 100%, $line-height: 1) {
+  height: $height;
+  line-height: $line-height;
+  font-size: $mainfz;
+  color: $mainclr;
+  background: $mainbg;
+  font-family: $ffr;
 }
 // ===============MINRESET============================
 *,
@@ -59,7 +59,7 @@ h6 {
 
 html,
 body {
-  .body-min-reset();
+  @include body-min-reset();
 }
 
 // ==============WRAPPER=========================
@@ -84,13 +84,13 @@ header {
     background: rgb(224, 224, 12);
     display: inline-block;
     min-width: 200px;
-    .border(3px, solid, #000);
-    .box-shadow(2px, 5px, 10px, #462e2e);
+    @include border(3px, solid, #000);
+    @include box-shadow(2px, 5px, 10px, #462e2e);
     border-radius: 10px;
     overflow: hidden;
     li {
       padding: 10px 0 10px 5px;
-      .transition(all, 0.2s, ease-out);
+      @include transition(all, 0.2s, ease-out);
       &:hover {
         background: lighten(rgb(224, 224, 12), 10%);
         padding: 10px 0 10px 20px;
@@ -100,7 +100,7 @@ header {
       }
       a {
         font-size: 22px;
-        color: @mainclr;
+        color: $mainclr;
         display: block;
       }
     }
@@ -124,7 +124,7 @@ main {
     }
     a {
       color: rgb(51, 143, 173);
-      transition: 0.2s ease-out;
+      @include transition(all, 0.2s, ease-out);
       &:hover {
         color: rgb(128, 51, 173);
       }
@@ -183,14 +183,14 @@ footer {
   padding: 26px 0 10px 5px;
 }
 .footer-box {
-  .border(3px, solid, #000);
+  @include border(3px, solid, #000);
   border-radius: 0 15px 0 15px;
   display: inline-block;
   padding: 20px;
   background: aquamarine;
   p {
     font-size: 23px;
-    font-family: @ffm;
+    font-family: $ffm;
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -199,7 +199,7 @@ footer {
 
 // ==============MEDIA=======================
 
-@media @mobile-L {
+@media #{$mobile-L} {
   .intro {
     p {
       font-size: 23px;
@@ -216,7 +216,7 @@ footer {
         font-size: 23px;
       }
       p {
-        font-size: @mainfz;
+        font-size: $mainfz;
       }
     }
   }
@@ -226,7 +226,7 @@ footer {
     }
   }
 }
-@media @mobile-S {
+@media #{$mobile-S} {
   .news-items {
     div {
       padding: 0 1px;

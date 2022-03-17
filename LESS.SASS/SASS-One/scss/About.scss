@@ -1,28 +1,27 @@
 // ================VARS==========================
-@mainfz: 16px;
-@mainclr: #000;
-@mainbg: #eee;
-@ffr: "Roboto", sans-serif;
-@ffm: "Montserrat", sans-serif;
-@mobile-L: ~"(max-width: 425px)";
-@mobile-S: ~"(max-width: 320px)";
+
+$mainclr: #000;
+$mainbg: #eee;
+$ffr: "Roboto", sans-serif;
+$ffm: "Montserrat", sans-serif;
+$mainfz: 16px;
 // ===================MIXINS================================
-.transition(@prop, @dur, @timefun) {
-  transition: @prop @dur @timefun;
+@mixin transition($prop, $dur, $timefun) {
+  transition: $prop $dur $timefun;
 }
-.border(@width, @style, @color) {
-  border: @width @style @color;
+@mixin border($width, $style, $color) {
+  border: $width $style $color;
 }
-.box-shadow(@x, @y, @z, @color) {
-  box-shadow: @x @y @z @color;
+@mixin box-shadow($x, $y, $z, $color) {
+  box-shadow: $x $y $z $color;
 }
-.body-min-reset(@height: 100%, @line-height: 1) {
-  height: @height;
-  line-height: @line-height;
-  font-size: @mainfz;
-  color: @mainclr;
-  background: @mainbg;
-  font-family: @ffr;
+@mixin body-min-reset($height: 100%, $line-height: 1) {
+  height: $height;
+  line-height: $line-height;
+  font-size: $mainfz;
+  color: $mainclr;
+  background: $mainbg;
+  font-family: $ffr;
 }
 // ===============MINRESET============================
 *,
@@ -60,7 +59,7 @@ h6 {
 
 html,
 body {
-  .body-min-reset();
+  @include body-min-reset();
 }
 
 // ==============WRAPPER=========================
@@ -87,13 +86,13 @@ header {
     background: rgb(224, 224, 12);
     display: inline-block;
     min-width: 200px;
-    .border(3px, solid, #000);
-    .box-shadow(2px, 5px, 10px, #462e2e);
+    @include border(3px, solid, #000);
+    @include box-shadow(2px, 5px, 10px, #462e2e);
     border-radius: 10px;
     overflow: hidden;
     li {
       padding: 10px 0 10px 5px;
-      .transition(all, 0.2s, ease-out);
+      @include transition(all, 0.2s, ease-out);
       &:hover {
         background: lighten(rgb(224, 224, 12), 10%);
         padding: 10px 0 10px 20px;
@@ -103,7 +102,7 @@ header {
       }
       a {
         font-size: 22px;
-        color: @mainclr;
+        color: $mainclr;
         display: block;
       }
     }
@@ -133,7 +132,7 @@ main {
   text-align: center;
   img {
     max-width: 100%;
-    .border(2px, solid, #000);
+    @include border(2px, solid, #000);
   }
 }
 .img-title {
@@ -144,7 +143,7 @@ main {
 
 // =========FORM=================
 form {
-  .border(3px, solid, #000);
+  @include border(3px, solid, #000);
   background: aquamarine;
   border-radius: 20px;
   display: inline-block;
@@ -166,12 +165,12 @@ form {
       padding: 10px;
       border-radius: 15px;
       border: 0;
-      font-size: @mainfz;
-      font-family: @ffr;
+      font-size: $mainfz;
+      font-family: $ffr;
       font-weight: 600;
-      .transition(all, 0.3s, ease-out);
+      @include transition(all, 0.3s, ease-out);
       &:focus {
-        .box-shadow(2px, 2px, 10px, rgb(98, 98, 98));
+        @include box-shadow(2px, 2px, 10px, rgb(98, 98, 98));
       }
     }
   }
@@ -183,7 +182,7 @@ form {
     background: orange;
     font-size: 20px;
     color: #fff;
-    .transition(all, 0.3s, ease-out);
+    @include transition(all, 0.3s, ease-out);
     &:hover {
       background: #f8c973;
       color: #000;
@@ -198,7 +197,7 @@ footer {
   padding-bottom: 30px;
   .footer-box {
     display: inline-block;
-    .border(3px, dashed, #f86);
+    @include border(3px, dashed, #f86);
     background: rgb(255, 184, 165);
     padding: 20px 40px 20px 15px;
     border-radius: 10px;

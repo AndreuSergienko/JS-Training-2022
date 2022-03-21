@@ -1,0 +1,79 @@
+/* Min Reset */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* ================MAIN======================= */
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.converter {
+  box-shadow: 2px 5px 20px rgb(136, 136, 136);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+.converter p {
+  padding-left: 20px;
+}
+
+.converter p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.converter-input {
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  padding: 7px 0 7px 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  max-width: 150px;
+  transition: 0.2s ease-out 0.1s;
+}
+
+.converter-input:focus {
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+.converter-label {
+  font-size: 20px;
+}

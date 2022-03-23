@@ -1,24 +1,39 @@
-// let input = document.querySelector('.converter-input')
-// let labels = document.querySelectorAll('.converter-label')
-// let spans = document.querySelectorAll('.output')
-// let converterField = document.querySelector('.converter')
 
-// const RATES = [
-//     USD = 3.25,
-//     EUR = 3.6,
-//     RUB = 3.14,
-// ]
+async function getRates() {
+    const response = await fetch('https://www.nbrb.by/api/exrates/rates?periodicity=0');
+    const json = await response.json();
+    const data = json;
+    rates = [
+        data[5],
+        data[6],
+        data[17],
+    ];
 
-// input.oninput = function () {
-//     for (let i = 0; i < RATES.length; i++) {
-//         let output = document.querySelector('#output' + [i]);
-//         output.innerHTML = RATES[i] * input.value;
-//     }
-// }
+    let o0 = document.querySelector('.output1');
+    let o1 = document.querySelector('.output2');
+    let o2 = document.querySelector('.output3');
+
+    let input = document.querySelector('.converter-input')
+
+    input.oninput = function () {
+        for (let i = 0; i < rates.length; i++) {
+            // o + [i].innerHTML = input.value * rates[i].Cur_OfficialRate;
+        }
+    }
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+getRates()
 

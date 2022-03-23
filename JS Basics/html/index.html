@@ -7,27 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Converter</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="converter">
+        <div class="theme-buttons">
+            <a class="theme-btn light" href="#">Light</a>
+            <a class="theme-btn dark" href="#">Dark</a>
+        </div>
+        <div class="converter new">
             <h1 class="title">Currency Converter</h1>
             <p>
                 <input class="converter-input" type="text">
                 <label class="converter-label" for="">BYN</label>
             </p>
             <p>
-                USD: <span class="output1"></span>
+                USD: <span class="output0"></span>
             </p>
             <p>
-                EUR: <span class="output2"></span>
+                EUR: <span class="output1"></span>
             </p>
             <p>
-                RUB: <span class="output3"></span>
+                RUB: <span class="output2"></span>
+            </p>
+        </div>
+        <div class="converter conv2">
+            <h1 class="title">Currency Converter(Old Rates)</h1>
+            <p>
+                <input class="converter-input converter-input-old" type="text">
+                <label class="converter-label" for="">BYN</label>
+            </p>
+            <p>
+                USD: <span class="output0 output-old0"></span>
+            </p>
+            <p>
+                EUR: <span class="output1 output-old1"></span>
+            </p>
+            <p>
+                RUB: <span class="output2 output-old2"></span>
             </p>
         </div>
     </div>

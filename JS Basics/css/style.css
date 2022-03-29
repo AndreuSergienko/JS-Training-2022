@@ -35,7 +35,7 @@ body {
 
 /* ========BODY LIGHT============ */
 body.light {
-  background: #fff;
+  background: #eee;
   transition: 0.2s ease-out;
 }
 body.light .theme-buttons {
@@ -52,7 +52,7 @@ body.light .converter {
   border: 0;
 }
 body.light .converter-input {
-  border: 1px dashed #000;
+  border: 0;
 }
 body.light .converter-input:focus {
   box-shadow: 2px 2px 15px #ccc;
@@ -125,7 +125,7 @@ body.dark .converter p {
   padding: 20px;
   margin-right: 50px;
 }
-.conv2 {
+.converter-2 {
   margin-left: 50px;
 }
 

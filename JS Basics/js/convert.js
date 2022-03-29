@@ -3,11 +3,11 @@ async function getRates() {
     const response = await fetch('https://www.nbrb.by/api/exrates/rates?periodicity=0');
     const json = await response.json();
     const data = json;
-    const rates = [
-        data[5],
-        data[6],
-        data[17],
-    ];
+    const rates = data.filter(rateObj => {
+        if (rateObj.Cur_Abbreviation === 'USD' || rateObj.Cur_Abbreviation === 'EUR' || rateObj.Cur_Abbreviation === 'RUB') {
+            return rateObj
+        }
+    })
 
     function getOutput(num) {
         return document.querySelector('.output' + num)
@@ -35,11 +35,11 @@ async function getOldRates() {
     const response = await fetch('https://www.nbrb.by/api/exrates/rates?ondate=2016-7-6&periodicity=0');
     const json = await response.json();
     const data = json;
-    const oldRates = [
-        data[5],
-        data[6],
-        data[17],
-    ];
+    const rates = data.filter(rateObj => {
+        if (rateObj.Cur_Abbreviation === 'USD' || rateObj.Cur_Abbreviation === 'EUR' || rateObj.Cur_Abbreviation === 'RUB') {
+            return rateObj
+        }
+    })
 
     function getOutput(num) {
         return document.querySelector('.output-old' + num)
@@ -48,12 +48,12 @@ async function getOldRates() {
     let input = document.querySelector('.converter-input-old')
 
     input.oninput = function () {
-        for (let i = 0; i < oldRates.length; i++) {
+        for (let i = 0; i < rates.length; i++) {
             if (i === 2) {
-                getOutput(i).innerHTML = (input.value / oldRates[i].Cur_OfficialRate / 10).toFixed(3);
+                getOutput(i).innerHTML = (input.value / rates[i].Cur_OfficialRate / 10).toFixed(3);
                 break
             }
-            getOutput(i).innerHTML = (input.value / oldRates[i].Cur_OfficialRate).toFixed(3);
+            getOutput(i).innerHTML = (input.value / rates[i].Cur_OfficialRate).toFixed(3);
         }
     }
 }

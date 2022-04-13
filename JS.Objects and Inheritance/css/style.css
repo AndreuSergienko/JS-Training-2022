@@ -50,7 +50,11 @@ body {
 }
 
 .ingredients-body {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     padding: 20px 0 0 20px;
+}
+
+label input {
+  margin-left: 10px;
 }

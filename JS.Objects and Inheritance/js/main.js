@@ -6,12 +6,11 @@ const labels = document.querySelectorAll('label')
 
 labels.forEach(label => {
     label.addEventListener('click', event => {
-        labels.forEach(item => {
-            item.classList.remove('active')
-        })
-        label.classList.add('active')
+        label.classList.toggle('active')
         if (label.classList.contains('active')) {
-            label.firstElementChild.checked === true
+            label.firstElementChild.checked = true
+        }else {
+            label.firstElementChild.checked = false
         }
     })
 })

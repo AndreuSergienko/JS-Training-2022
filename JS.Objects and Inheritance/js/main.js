@@ -1,16 +1,11 @@
-'use strict'
+const ingredients = document.getElementById('ingredients');
 
-
-const inputs = document.querySelectorAll('.ingredient-input')
-const labels = document.querySelectorAll('label')
-
-labels.forEach(label => {
-    label.addEventListener('click', event => {
-        label.classList.toggle('active')
-        if (label.classList.contains('active')) {
-            label.firstElementChild.checked = true
-        }else {
-            label.firstElementChild.checked = false
-        }
-    })
+ingredients.addEventListener('click', e => {
+    const ingredientItem = e.target.closest('.ingredients__item');
+    ingredientItem.classList.toggle('checked');
+    if (ingredientItem.classList.contains('checked')) {
+        ingredientItem.children[0].checked = true;
+    }else {
+        ingredientItem.children[0].checked = false;
+    }
 })

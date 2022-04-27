@@ -25,34 +25,34 @@
             <div class="first-row">
                 <div class="pizza__items">
                     <div class="pizza__item">
-                        <h2 class="pizza__title">Ветчина и грибы</h2>
-                        <div class="pizza__description">
+                        <div class="pizza__description" data-description="0">
+                            <h2 class="pizza__title">Ветчина и грибы</h2>
                             <div>Тесто: слоеное</div>
                             <div>Ингредиенты: томатный соус, моцарелла, ветчина, шампиньоны</div>
                             <div>Калорийность: 1200Ккал</div>
                             <div>Цена: 15$</div>
                         </div>
-                        <div class="pizza__add-btn">Добавить</div>
+                        <div class="pizza__add-btn" data-add="0">Добавить</div>
                     </div>
                     <div class="pizza__item">
-                        <h2 class="pizza__title">Гавайская</h2>
-                        <div class="pizza__description">
+                        <div class="pizza__description" data-description="1">
+                            <h2 class="pizza__title">Гавайская</h2>
                             <div>Тесто: тонкое</div>
                             <div>Ингредиенты: ветчина, ананасы, моцарелла, томатный соус</div>
                             <div>Калорийность: 1500Ккал</div>
                             <div>Цена: 20$</div>
                         </div>
-                        <div class="pizza__add-btn">Добавить</div>
+                        <div class="pizza__add-btn" data-add="1">Добавить</div>
                     </div>
                     <div class="pizza__item">
-                        <h2 class="pizza__title">Колбаски Барбекю</h2>
-                        <div class="pizza__description">
+                        <div class="pizza__description" data-description="2">
+                            <h2 class="pizza__title">Колбаски Барбекю</h2>
                             <div>Тесто: толстое</div>
                             <div>Ингредиенты: острые колбаски чоризо, соус барбекю, томаты, красный лук, моцарелла, томатный соус</div>
                             <div>Калорийность: 1850Ккал</div>
                             <div>Цена: 25$</div>
                         </div>
-                        <div class="pizza__add-btn">Добавить</div>
+                        <div class="pizza__add-btn" data-add="2">Добавить</div>
                     </div>
                 </div>
             </div>
@@ -61,39 +61,53 @@
                     <div class="dough-select">
                         <label>Тесто</label>
                         <select name="dough" id="dough-select">
-                            <option value="thin">Тонкое</option>
-                            <option value="thick">Толстое</option>
-                            <option value="flacky">Слоеное</option>
+                            <option value="Тонкое">Тонкое</option>
+                            <option value="Толстое">Толстое</option>
+                            <option value="Слоеное">Слоеное</option>
                         </select>
                     </div>
                     <div class="ingredients" id="ingredients">
                         <div class="ingredients__item">
-                            <input type="checkbox" value="mashrooms" id="ingredients__input">
-                            <label id="ingredients__label">Шампиньоны</label>
+                            <input type="checkbox" value="mashrooms" class="ingredients__input">
+                            <label><span id="ingredients__name">Шампиньоны</span> <span id="ingredients__cal">40</span> ккал <span id="ingredients__price">2</span>$</label>
                         </div>
                         <div class="ingredients__item">
-                            <input type="checkbox" value="mozarella" id="ingredients__input">
-                            <label id="ingredients__label">Моцарелла</label>
+                            <input type="checkbox" value="mozarella" class="ingredients__input">
+                            <label><span id="ingredients__name">Моцарелла</span> <span id="ingredients__cal">35</span> ккал <span id="ingredients__price">3</span>$</label>
                         </div>
                         <div class="ingredients__item">
-                            <input type="checkbox" value="chili" id="ingredients__input">
-                            <label id="ingredients__label">Перец чили</label>
+                            <input type="checkbox" value="sausage" class="ingredients__input">
+                            <label><span id="ingredients__name">Ветчина</span> <span id="ingredients__cal">35</span> ккал <span id="ingredients__price">3</span>$</label>
                         </div>
                         <div class="ingredients__item">
-                            <input type="checkbox" value="shrimp" id="ingredients__input">
-                            <label id="ingredients__label">Креветки</label>
+                            <input type="checkbox" value="chili" class="ingredients__input">
+                            <label><span id="ingredients__name">Перец чили</span> <span id="ingredients__cal">15</span> ккал <span id="ingredients__price">2.5</span>$</label>
+                        </div>
+                        <div class="ingredients__item">
+                            <input type="checkbox" value="shrimp" class="ingredients__input">
+                            <label><span id="ingredients__name">Креветки</span> <span id="ingredients__cal">13</span> ккал <span id="ingredients__price">5</span>$</label>
+                        </div>
+                        <div class="ingredients__item">
+                            <input type="checkbox" value="bbq" class="ingredients__input">
+                            <label><span id="ingredients__name">Соус барбекю</span> <span id="ingredients__cal">50</span> ккал <span id="ingredients__price">2</span>$</label>
+                        </div>
+                        <div class="ingredients__item">
+                            <input type="checkbox" value="cucumbers" class="ingredients__input">
+                            <label><span id="ingredients__name">Огурцы</span> <span id="ingredients__cal">24</span> ккал <span id="ingredients__price">2</span>$</label>
+                        </div>
+                        <div class="ingredients__item">
+                            <input type="checkbox" value="tomatoes" class="ingredients__input">
+                            <label><span id="ingredients__name">Помидоры</span> <span id="ingredients__cal">21</span> ккал <span id="ingredients__price">2</span>$</label>
                         </div>
                     </div>
-                    <button type="button" class="create-button">Создать пиццу</button>
+                    <button type="button" class="create-button" id="create-button">Создать пиццу</button>
                 </div>
-                <div class="result" id="result-window">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nobis laudantium possimus itaque ex sapiente necessitatibus ipsa eaque ipsam in non rerum accusantium placeat, minima consectetur aperiam? Ipsam quos error soluta incidunt voluptatibus cupiditate porro quaerat? Autem doloremque eius officia amet aliquam. Dolor debitis numquam tempore rem quae voluptatibus perspiciatis aut aperiam molestias doloribus cupiditate non accusamus, omnis quas doloremque! Doloremque labore eius blanditiis molestias iure et voluptas quod repellat error perferendis ducimus voluptates quibusdam, nobis voluptatum laborum. At repellat voluptatem beatae, ut dolores eum cupiditate vero facere dolorum, tempore sint natus, animi repudiandae voluptate veniam explicabo exercitationem quos vitae!
-                </div>
+                <div class="result" id="result-window"></div>
             </div>
-
         </div>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/createPizza.js"></script>
 </body>
 
 </html>

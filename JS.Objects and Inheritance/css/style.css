@@ -165,7 +165,7 @@ body {
   margin-right: 5px;
 }
 
-.ingredients__item label {
+.ingredients__item label #ingredients__name {
   font-size: 17px;
   font-weight: 600;
 }
@@ -187,8 +187,46 @@ body {
 }
 
 .result {
-  max-width: 500px;
-  border: 2px solid #000;
+  display: none;
+  max-width: 550px;
+  border: 3px dashed orange;
+  border-radius: 15px;
   margin-left: 250px;
-  padding: 5px;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.result.show {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.result .pizza__title {
+  color: #2f3a7c;
+}
+
+.result h2 {
+  text-align: center;
+}
+
+.result div {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.order-button {
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 25px;
+  background: rgb(188, 187, 187);
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.order-button:hover {
+  background: rgb(158, 158, 158);
 }

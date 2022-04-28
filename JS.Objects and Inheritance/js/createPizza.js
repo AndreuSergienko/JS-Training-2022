@@ -22,38 +22,37 @@ ingredientsItems.forEach(item => {
             const ingredientCal = clickedItem.children[1].children[1].innerHTML;
             const ingredientPrice = clickedItem.children[1].children[2].innerHTML;
             ingredientNamesArray.push(ingredientName);
-            if (ingredientCaloriesArray.length > 0 && ingredientPriceArray.length > 0) {
-                ingredientCaloriesArray.push(+ingredientCal);
-                ingredientPriceArray.push(+ingredientPrice);
-                let sumOfCalories = ingredientCaloriesArray.reduce((acc, num) => {
-                    return acc + num;
-                });
-                let sumOfPrice = ingredientPriceArray.reduce((acc, num) => {
-                    return acc + num;
-                });
-                let readyPizza = new Pizza(ingredientNamesArray, sumOfCalories, sumOfPrice);
-                doughSelect.onselect = this.value;
-                doughSelect.onchange = this.value;
-                createBtn.addEventListener('click', () => {
-                    gatherData(readyPizza, doughSelect.value);
-                });
-            } else {
-                ingredientCaloriesArray.push(+ingredientCal);
-                ingredientPriceArray.push(+ingredientPrice);
-                let sumOfCalories = ingredientCaloriesArray.reduce((acc, num) => {
-                    return acc + num;
-                });
-                let sumOfPrice = ingredientPriceArray.reduce((acc, num) => {
-                    return acc + num;
-                });
-                let readyPizza = new Pizza(ingredientNamesArray, sumOfCalories, sumOfPrice);
-                doughSelect.onselect = this.value;
-                doughSelect.onchange = this.value;
-                createBtn.addEventListener('click', () => {
-                    gatherData(readyPizza, doughSelect.value);
-                });
-            }
-        };
+            ingredientCaloriesArray.push(+ingredientCal);
+            ingredientPriceArray.push(+ingredientPrice);
+            let sumOfCalories = ingredientCaloriesArray.reduce((acc, num) => {
+                return acc + num;
+            });
+            let sumOfPrice = ingredientPriceArray.reduce((acc, num) => {
+                return acc + num;
+            });
+            let readyPizza = new Pizza(ingredientNamesArray, sumOfCalories, sumOfPrice);
+            doughSelect.onselect = this.value;
+            doughSelect.onchange = this.value;
+            createBtn.addEventListener('click', () => {
+                gatherData(readyPizza, doughSelect.value);
+            });
+        } else {
+            ingredientNamesArray.pop();
+            ingredientCaloriesArray.pop();
+            ingredientPriceArray.pop();
+            let sumOfCalories = ingredientCaloriesArray.reduce((acc, num) => {
+                return acc + num;
+            });
+            let sumOfPrice = ingredientPriceArray.reduce((acc, num) => {
+                return acc + num;
+            });
+            let readyPizza = new Pizza(ingredientNamesArray, sumOfCalories, sumOfPrice);
+            doughSelect.onselect = this.value;
+            doughSelect.onchange = this.value;
+            createBtn.addEventListener('click', () => {
+                gatherData(readyPizza, doughSelect.value);
+            });
+        }
     });
 });
 

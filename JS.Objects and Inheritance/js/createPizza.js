@@ -1,9 +1,9 @@
 const ingredientsItems = document.querySelectorAll('.ingredients__item');
 const createBtn = document.getElementById('create-button');
 const doughSelect = document.getElementById('dough-select');
-let ingredientNamesArray = [];
-let ingredientCaloriesArray = [];
-let ingredientPriceArray = [];
+let ingredientNamesArray = [],
+    ingredientCaloriesArray = [],
+    ingredientPriceArray = [];
 
 class Pizza {
     constructor(ingredients, calories, price) {

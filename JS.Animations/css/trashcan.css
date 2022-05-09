@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 130px 0 0 305px;
+}
+
+.trashcan {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  width: 100%;
+}
+
+/* closed trashcan*/
+.trashcan img {
+  max-width: 100px;
+}
+
+/* opened trashcan*/
+.trashcan img.opened {
+  position: relative;
+  top: -22px;
+}
+
+.trash img {
+  position: absolute;
+  max-width: 100px;
+  border-radius: 50%;
+}

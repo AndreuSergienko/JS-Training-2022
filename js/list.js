@@ -9,17 +9,10 @@ links.forEach((link) => {
 	link.style = "text-decoration:none;font-size:25px;color:#e86";
 	link.addEventListener("mouseover", function (e) {
 		e.preventDefault();
-		links.forEach((item) => {
-			item.style = "text-decoration:none;font-size:25px;color:#e86";
-		});
 		link.style =
 			"text-decoration:none;font-size:25px;color:rgba(0, 0, 0, 1);transition:all 0.3s ease-out";
 	});
 	link.addEventListener("mouseleave", function (e) {
-		links.forEach((item) => {
-			e.preventDefault();
-			item.style =
-				"text-decoration:none;font-size:25px;color:#e86;transition:all 0.2s ease-out";
-		});
+		link.style = "text-decoration:none;font-size:25px;color:#e86;transition:all 0.2s ease-out";
 	});
 });
